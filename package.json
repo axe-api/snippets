@@ -3,8 +3,15 @@
   "displayName": "axe-api-snippets",
   "description": "Axe API Framework Snippets",
   "version": "0.0.1",
+  "scripts": {
+    "build": "vsce package"
+  },
   "engines": {
     "vscode": "^1.87.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/axe-api/snippets.git"
   },
   "categories": [
     "Snippets"

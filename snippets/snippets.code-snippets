@@ -1,1 +1,280 @@
-{}
+{
+  "swagger": {
+    "scope": "typescript",
+    "prefix": "swagger",
+    "body": [
+      "export default {",
+      "  info: {",
+      "    title: \"$1\",",
+      "    description: \"Description the API in here\"",
+      "  },",
+      "};"
+    ],
+    "description": "Create a base swagger file"
+  },
+  "model": {
+    "scope": "typescript",
+    "prefix": "model",
+    "body": [
+      "import { Model } from \"axe-api\";",
+      "",
+      "class $1 extends Model {",
+      "",
+      "}",
+      "",
+      "export default $1;"
+    ],
+    "description": "Create Axe API model"
+  },
+  "fillable": {
+    "scope": "typescript",
+    "prefix": "fillable",
+    "body": ["get fillable() {", "  return [\"$1\"];", "}"],
+    "description": "Create the fillable getter for the Axe API model"
+  },
+  "validations": {
+    "scope": "typescript",
+    "prefix": "validations",
+    "body": ["get validations() {", "  return {", "    $1: \"\"", "  };", "}"],
+    "description": "Create the validations getter for the Axe API model"
+  },
+  "middlewares": {
+    "scope": "typescript",
+    "prefix": "middlewares",
+    "body": [
+      "get middlewares() {",
+      "  return [",
+      "    (context: IContext) => {",
+      "      $1",
+      "    },",
+      "  ];",
+      "}"
+    ],
+    "description": "Create the middlewares getter for the Axe API model"
+  },
+  "modelMiddlewares": {
+    "scope": "typescript",
+    "prefix": "middleware",
+    "body": [
+      "{",
+      "  handler: [HandlerTypes.INSERT],",
+      "  middleware: (context: IContext) => {},",
+      "}"
+    ],
+    "description": "Create a handler-based middleware for the Axe API model"
+  },
+  "onBeforeInsert": {
+    "scope": "typescript",
+    "prefix": "onBeforeInsert",
+    "body": [
+      "export default async ({$1}: IBeforeInsertContext) => {",
+      "",
+      "};"
+    ],
+    "description": "Create onBeforeInsert() hook"
+  },
+  "onBeforeUpdateQuery": {
+    "scope": "typescript",
+    "prefix": "onBeforeUpdateQuery",
+    "body": [
+      "export default async ({$1}: IBeforeUpdateQueryContext) => {",
+      "",
+      "};"
+    ],
+    "description": "Create onBeforeUpdateQuery() hook"
+  },
+  "onBeforeUpdate": {
+    "scope": "typescript",
+    "prefix": "onBeforeUpdate",
+    "body": [
+      "export default async ({$1}: IBeforeUpdateContext) => {",
+      "",
+      "};"
+    ],
+    "description": "Create onBeforeUpdate() hook"
+  },
+  "onBeforeDeleteQuery": {
+    "scope": "typescript",
+    "prefix": "onBeforeDeleteQuery",
+    "body": [
+      "export default async ({$1}: IBeforeDeleteQueryContext) => {",
+      "",
+      "};"
+    ],
+    "description": "Create onBeforeDeleteQuery() hook"
+  },
+  "onBeforeDelete": {
+    "scope": "typescript",
+    "prefix": "onBeforeDelete",
+    "body": [
+      "export default async ({$1}: IBeforeDeleteContext) => {",
+      "",
+      "};"
+    ],
+    "description": "Create onBeforeDelete() hook"
+  },
+  "onBeforeForceDeleteQuery": {
+    "scope": "typescript",
+    "prefix": "onBeforeForceDeleteQuery",
+    "body": [
+      "export default async ({$1}: IBeforeForceDeleteQueryContext) => {",
+      "",
+      "};"
+    ],
+    "description": "Create onBeforeForceDeleteQuery() hook"
+  },
+  "onBeforeForceDelete": {
+    "scope": "typescript",
+    "prefix": "onBeforeForceDelete",
+    "body": [
+      "export default async ({$1}: IBeforeForceDeleteContext) => {",
+      "",
+      "};"
+    ],
+    "description": "Create onBeforeForceDelete() hook"
+  },
+  "onBeforePaginate": {
+    "scope": "typescript",
+    "prefix": "onBeforePaginate",
+    "body": [
+      "export default async ({$1}: IBeforePaginateContext) => {",
+      "",
+      "};"
+    ],
+    "description": "Create onBeforePaginate() hook"
+  },
+  "onBeforeAll": {
+    "scope": "typescript",
+    "prefix": "onBeforeAll",
+    "body": ["export default async ({$1}: IBeforeAllContext) => {", "", "};"],
+    "description": "Create onBeforeAll() hook"
+  },
+  "onBeforeShow": {
+    "scope": "typescript",
+    "prefix": "onBeforeShow",
+    "body": ["export default async ({$1}: IBeforeShowContext) => {", "", "};"],
+    "description": "Create onBeforeShow() hook"
+  },
+  "onAfterInsert": {
+    "scope": "typescript",
+    "prefix": "onAfterInsert",
+    "body": ["export default async ({$1}: IAfterInsertContext) => {", "", "};"],
+    "description": "Create onAfterInsert() hook"
+  },
+  "onAfterUpdateQuery": {
+    "scope": "typescript",
+    "prefix": "onAfterUpdateQuery",
+    "body": [
+      "export default async ({$1}: IAfterUpdateQueryContext) => {",
+      "",
+      "};"
+    ],
+    "description": "Create onAfterUpdateQuery() hook"
+  },
+  "onAfterUpdate": {
+    "scope": "typescript",
+    "prefix": "onAfterUpdate",
+    "body": ["export default async ({$1}: IAfterUpdateContext) => {", "", "};"],
+    "description": "Create onAfterUpdate() hook"
+  },
+  "onAfterDeleteQuery": {
+    "scope": "typescript",
+    "prefix": "onAfterDeleteQuery",
+    "body": [
+      "export default async ({$1}: IAfterDeleteQueryContext) => {",
+      "",
+      "};"
+    ],
+    "description": "Create onAfterDeleteQuery() hook"
+  },
+  "onAfterDelete": {
+    "scope": "typescript",
+    "prefix": "onAfterDelete",
+    "body": ["export default async ({$1}: IAfterDeleteContext) => {", "", "};"],
+    "description": "Create onAfterDelete() hook"
+  },
+  "onAfterForceDeleteQuery": {
+    "scope": "typescript",
+    "prefix": "onAfterForceDeleteQuery",
+    "body": [
+      "export default async ({$1}: IAfterForceDeleteQueryContext) => {",
+      "",
+      "};"
+    ],
+    "description": "Create onAfterForceDeleteQuery() hook"
+  },
+  "onAfterForceDelete": {
+    "scope": "typescript",
+    "prefix": "onAfterForceDelete",
+    "body": [
+      "export default async ({$1}: IAfterForceDeleteContext) => {",
+      "",
+      "};"
+    ],
+    "description": "Create onAfterForceDelete() hook"
+  },
+  "onAfterPaginate": {
+    "scope": "typescript",
+    "prefix": "onAfterPaginate",
+    "body": [
+      "export default async ({$1}: IAfterPaginateContext) => {",
+      "",
+      "};"
+    ],
+    "description": "Create onAfterPaginate() hook"
+  },
+  "onAfterAll": {
+    "scope": "typescript",
+    "prefix": "onAfterAll",
+    "body": ["export default async ({$1}: IAfterAllContext) => {", "", "};"],
+    "description": "Create onAfterAll() hook"
+  },
+  "onAfterShow": {
+    "scope": "typescript",
+    "prefix": "onAfterShow",
+    "body": ["export default async ({$1}: IAfterShowContext) => {", "", "};"],
+    "description": "Create onAfterShow() hook"
+  },
+  "migration": {
+    "scope": "typescript",
+    "prefix": "migration",
+    "body": [
+      "export const up = function (knex) {",
+      "  return knex.schema.createTable(\"$1\", function (table) {",
+      "    table.increments();",
+      "    table.string(\"$2\")",
+      "    table.timestamps();",
+      "  });",
+      "};",
+      "",
+      "export const down = function (knex) {",
+      "  return knex.schema.dropTable(\"$1\");",
+      "};"
+    ],
+    "description": "Create a database migration functions"
+  },
+  "hasMany": {
+    "scope": "typescript",
+    "prefix": "hasMany",
+    "body": ["$1() {", "  return this.hasMany(\"$2\", \"id\", \"$3\");", "}"],
+    "description": "Create a has-many relationship in a Axe API model"
+  },
+  "hasOne": {
+    "scope": "typescript",
+    "prefix": "hasOne",
+    "body": ["$1() {", "  return this.hasOne(\"$2\", \"id\", \"$3\");", "}"],
+    "description": "Create a has-one relationship in a Axe API model"
+  },
+  "serializer": {
+    "scope": "typescript",
+    "prefix": "serializer",
+    "body": [
+      "import { AxeRequest } from \"axe-api\";",
+      "",
+      "export default (item: any, request: AxeRequest) => {",
+      "  return item;",
+      "};"
+    ],
+    "description": "Create an Axe API model serializer"
+  }
+}

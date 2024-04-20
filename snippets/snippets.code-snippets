@@ -276,5 +276,65 @@
       "};"
     ],
     "description": "Create an Axe API model serializer"
+  },
+  "beforeHooks": {
+    "scope": "typescript",
+    "prefix": "beforeHooks",
+    "body": [
+      "import {",
+      " IBeforeDeleteContext,",
+      " IBeforeDeleteQueryContext,",
+      " IBeforeInsertContext,",
+      " IBeforePaginateContext,",
+      " IBeforeShowContext,",
+      " IBeforeUpdateContext,",
+      " IBeforeUpdateQueryContext,",
+      "} from \"axe-api\";",
+      "",
+      "export const onBeforeInsert = async ({}: IBeforeInsertContext) => {};",
+      "",
+      "export const onBeforeUpdateQuery = async ({}: IBeforeUpdateQueryContext) => {};",
+      "",
+      "export const onBeforeUpdate = async ({}: IBeforeUpdateContext) => {};",
+      "",
+      "export const onBeforeDeleteQuery = async ({}: IBeforeDeleteQueryContext) => {};",
+      "",
+      "export const onBeforeDelete = async ({}: IBeforeDeleteContext) => {};",
+      "",
+      "export const onBeforePaginate = async ({}: IBeforePaginateContext) => {};",
+      "",
+      "export const onBeforeShow = async ({}: IBeforeShowContext) => {};"
+    ],
+    "description": "Create all before hooks for a model"
+  },
+  "afterHooks": {
+    "scope": "typescript",
+    "prefix": "afterHooks",
+    "body": [
+      "import {",
+      " IAfterDeleteContext,",
+      " IAfterDeleteQueryContext,",
+      " IAfterInsertContext,",
+      " IAfterPaginateContext,",
+      " IAfterShowContext,",
+      " IAfterUpdateContext,",
+      " IAfterUpdateQueryContext,",
+      "} from \"axe-api\";",
+      "",
+      "export const onAfterInsert = async ({}: IAfterInsertContext) => {};",
+      "",
+      "export const onAfterUpdateQuery = async ({}: IAfterUpdateQueryContext) => {};",
+      "",
+      "export const onAfterUpdate = async ({}: IAfterUpdateContext) => {};",
+      "",
+      "export const onAfterDeleteQuery = async ({}: IAfterDeleteQueryContext) => {};",
+      "",
+      "export const onAfterDelete = async ({}: IAfterDeleteContext) => {};",
+      "",
+      "export const onAfterPaginate = async ({}: IAfterPaginateContext) => {};",
+      "",
+      "export const onAfterShow = async ({}: IAfterShowContext) => {};"
+    ],
+    "description": "Create all afters hooks for a model"
   }
 }
